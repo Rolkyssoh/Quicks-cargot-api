@@ -14,26 +14,26 @@ export class User extends BaseEntity {
     @Column()
     user_phoneNumber: string;
 
-    @Column()
-    user_password: string;
+    // @Column()
+    // user_password: string;
 
-    @Column()
+    @Column({nullable: true})
     user_city: string;
 
     // Carrier
-    @Column()
+    @Column({nullable: true})
     vehicle_maticule: string;
 
-    @Column()
+    @Column({nullable: true})
     vehicle_mark: string;
 
-    @Column()
+    @Column({nullable: true})
     vehicle_capacity: string;
 
-    @Column()
+    @Column({nullable: true})
     vehicle_type: string;
 
-    @Column()
+    @Column({nullable: true})
     vehicle_picture: string;
 
 }
