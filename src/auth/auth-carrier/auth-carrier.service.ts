@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { CreateUserDto } from '../dto/create-user.dto';
+import { CreateCarrierDto } from '../dto/create-user.dto';
 import { CarrierRepository } from './carrier.repository';
 
 @Injectable()
@@ -10,8 +10,8 @@ export class AuthCarrierService {
         private carrierRepository: CarrierRepository,
     ){}
 
-    signUpCarrier(createUserDto: CreateUserDto){
-        return this.carrierRepository.signUpCarrier(createUserDto)
+    signUpCarrier(createCarrierDto: CreateCarrierDto){
+        return this.carrierRepository.signUpCarrier(createCarrierDto)
     }
 }
  

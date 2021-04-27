@@ -1,6 +1,7 @@
-import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn, Unique } from "typeorm";
 
 @Entity()
+@Unique(['user_phoneNumber'])
 export class User extends BaseEntity {
     @PrimaryGeneratedColumn()
     user_id: number;
@@ -14,7 +15,7 @@ export class User extends BaseEntity {
     @Column()
     user_phoneNumber: string;
 
-    // @Column()
+    // @Column() 
     // user_password: string;
 
     @Column({nullable: true})

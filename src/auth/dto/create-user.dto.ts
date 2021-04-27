@@ -1,6 +1,6 @@
 import { IsEmail, IsMobilePhone, IsNotEmpty, IsOptional, IsString, MaxLength, MinLength } from "class-validator";
 
-export class CreateUserDto {
+export class CreateCarrierDto {
     @IsNotEmpty()
     name:string;
 
@@ -8,32 +8,34 @@ export class CreateUserDto {
     @IsEmail()
     email:string;
 
-    // @IsNotEmpty()
-    // @IsString()
-    // @MinLength(6)
-    // @MaxLength(20)
-    // password:string;
-
     @IsNotEmpty()
     @IsMobilePhone()
     phoneNumber:string;
 
-    @IsOptional()
-    user_city: string;
+    @IsNotEmpty()
+    city: string;
 
     // Carrier
     @IsOptional()
-    vehicle_maticule: string;
+    maticule: string;
 
     @IsOptional()
-    vehicle_mark: string;
+    mark: string;
 
     @IsOptional()
-    vehicle_capacity: string;
+    capacity: string;
 
     @IsOptional()
-    vehicle_type: string;
+    type: string;
 
     @IsOptional()
-    vehicle_picture: string;
-}
+    picture: string;
+};
+
+export class CreateAdminDto {};
+
+export class IdentifyUserDto {
+    @IsNotEmpty()
+    @IsMobilePhone()
+    phoneNumber:string;
+};
